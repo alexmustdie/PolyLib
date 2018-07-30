@@ -9,7 +9,7 @@ using namespace pqxx;
 using namespace std;
 
 MyDrive::MyDrive(const string &access_token):
-  yandex::Drive(access_token)
+  Drive(access_token)
 {}
 
 vector<resource_t> MyDrive::getResources(const string &path, const size_t limit, const size_t offset) const
