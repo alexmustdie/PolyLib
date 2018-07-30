@@ -17,8 +17,8 @@ sudo cp build/libpolylib.so /usr/lib/
 
 cd usage/
 
-g++ synh-drive.cpp -lyandex -lpolylib -lpq -lpqxx -o release/synch-drive<br>
-g++ main.cpp -lyandex -lvk -lpolylib -lpq -lpqxx -o release/bot
+g++ -o release/synch-drive -std=c++14 synh-drive.cpp -lyandex -lpolylib -lpq -lpqxx<br>
+g++ -o release/bot -std=c++14 main.cpp -lyandex -lvk -lpolylib -lpq -lpqxx
 
 cd release/
 
