@@ -9,8 +9,8 @@
 ## Install
 
 sudo mkdir polylib<br>
-sudo cp include/*.hpp /usr/include/polylib/<br>
-g++ -shared -o build/libpolylib.so -std=c++14 src/*.cpp -fPIC -lyandex -lvk<br>
+sudo cp include/\*.hpp /usr/include/polylib/<br>
+g++ -shared -o build/libpolylib.so -std=c++14 src/\*.cpp -fPIC -lyandex -lvk<br>
 sudo cp build/libpolylib.so /usr/lib/
 
 ## Usage
