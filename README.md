@@ -22,5 +22,5 @@ g++ main.cpp -lyandex -lvk -lpolylib -lpq -lpqxx -o release/bot
 
 cd release/
 
-./synch-drive
+./synch-drive<br>
 ./bot
