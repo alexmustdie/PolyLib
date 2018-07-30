@@ -19,7 +19,11 @@ namespace polylib
     bool is_pending;
 
     transaction_t(const id_t &user_id):
-      user_id(user_id)
+      id(0),
+      user_id(user_id),
+      file_id(""),
+      amount(0),
+      is_pending(false)
     {
       get();
     }
@@ -77,7 +81,11 @@ namespace polylib
     std::string path;
     size_t offset;
 
-    payload_t(const nlohmann::json &input)
+    payload_t(const nlohmann::json &input):
+      action(""),
+      file_id(""),
+      path(""),
+      offset(0)
     {
       if (!input.empty())
       {
