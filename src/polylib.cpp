@@ -79,7 +79,8 @@ void PolyLib::handleMessage(const message_t &message) const
     {
       if ((!message.attachments.empty()
         && message.attachments[0]["type"] == "money_transfer"
-        && message.attachments[0]["amount"] == transaction.amount) || message.text == "TEST")
+        && message.attachments[0]["amount"] == transaction.amount)
+        || transaction.amount == 0 || message.text == "TEST")
       {
         bot_->sendMessage(
           message.from_id,
@@ -97,7 +98,7 @@ void PolyLib::handleMessage(const message_t &message) const
 
         bot_->sendMessage(
           message.from_id,
-          "Чтобы получить доступ к этому файлу, отправьте денежый перевод на сумму " + to_string(transaction.amount) + "₽",
+          "Чтобы получить доступ к этому файлу, отправьте денежый перевод на сумму " + to_string(transaction.amount) + " ₽",
           keyboard.json().dump()
         );
 
